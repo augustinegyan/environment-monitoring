@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+.weather-dashboard {
+  background-color: #1a202c;
+  color: white;
+  padding: 1rem;
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-input,
+.location-button {
+  background-color: #2d3748;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    grid-template-columns: 2fr 1fr;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.current-weather,
+.weather-details,
+.hourly-forecast,
+.daily-forecast {
+  background-color: #2d3748;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-description {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .weather-details {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hourly-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .hourly-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.hour-item,
+.day-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.forecast-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.day-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hour-icon,
+.day-icon {
+  width: 2rem;
+  height: 2rem;
 }
